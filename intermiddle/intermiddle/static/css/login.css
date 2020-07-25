@@ -1,0 +1,103 @@
+body{
+    
+    margin: 0px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2E3131;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #8C14FC;
+    align-items: center;
+}
+
+#login_form{
+    margin-bottom: 10vh;
+    background-color: #8C14FC;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    
+    
+}
+#loginText{
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+}
+.main_input_login{
+    background-color: #2E3131;
+    border: none;
+    border: 1px solid #2E3131;
+    margin-top: 10px;
+    top: 100px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.main_input_login:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+
+
+#loginErrorHelperA{
+    margin-top: 10px;
+    color: white;
+    
+}
+#mainButtonSpace{
+    margin-top: calc(100% - 200px);
+    
+}
+
+.btnInLoginPanel{
+    margin-top: 5px;
+    background-color: #2E3131;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.btnInLoginPanel:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+
+#logo_loginPanel{
+    height: 180px;
+    width: 300px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+#RemeberText{
+    color: white;
+}

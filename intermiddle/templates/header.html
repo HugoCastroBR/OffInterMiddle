@@ -1,0 +1,97 @@
+{% load static %}
+
+{% block content %}{% endblock %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermiddle</title>
+
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+    
+</head>
+<body id="header">
+    <div id="headermax">
+        <link rel="stylesheet" href="{% static '/css/header.css' %}">
+        <header  id="interheader">
+            <div id="ConfigMenuHeader" class="MenuHeader ConfigMenu no">
+                <div class="ItensContainerOpsMenu" id="MenuFirst">
+                    <a class="LinkItemMenu" href="">Privacidade</a>
+
+                    
+                </div>
+                <div class="ItensContainerOpsMenu" id="MenuTwo">
+                    <a class="LinkItemMenu" href="">Segurança</a>
+        
+                </div>
+                <div class="ItensContainerOpsMenu" id="MenuThree">
+                    <a class="LinkItemMenu" href="">Alterar Conta</a>
+                    <a class="LinkItemMenu" id="SairA" href="">Sair</a>
+                </div>
+                
+            </div>
+
+            <div id="MainMenuHeader" class="MenuHeader MainMenu no">
+                <div class="ItensContainerOpsMenu" id="MenuFirst">
+                    <a class="LinkItemMenu" href="">Minha conta</a>
+                    <a class="LinkItemMenu" href="">Favoritos</a>
+                    <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                    
+                </div>
+                <div class="ItensContainerOpsMenu" id="MenuTwo">
+                    <a class="LinkItemMenu" href="">Meus Negocios</a>
+                    <a class="LinkItemMenu" href="">Trabalhos</a>
+                    <a class="LinkItemMenu" href="">Conexões</a>
+                </div>
+                <div class="ItensContainerOpsMenu" id="MenuThree">
+                    <a class="LinkItemMenu" href="">Ajuda</a>
+                    <a class="LinkItemMenu" href="">Configurações</a>
+                    <a class="LinkItemMenu" href="">Alterar Conta</a>
+                    <a class="LinkItemMenu" id="SairA" href="">Sair</a>
+                </div>
+                
+            </div>
+
+            <div class="MainContainer">
+                <div class="MidCHeader Container">
+                    <div class="LogoC Container">
+                        <div class="LogosHeader  "onclick=window.location.href="http://127.0.0.1:8000">
+                            <img id="logoDentro" class="ClickPointer" src="{% static '/img/logo_dentro.png' %}" alt="Logo Parte de Dentro">
+                            <img id="logoMedio" class="ClickPointer" src="{% static '/img/logo_medio.png' %}" alt="Logo Parte do Meio">
+                            <img id="logoFora" class="ClickPointer" src="{% static '/img/logo_fora.png' %}" alt="Logo Parte de Fora">
+                        </div>
+                    </div>
+                    <div class="MidC Container">
+                        <div class="SearchC">
+                            <form class="formSearch"action="{% url 'buscar' %}">
+                                <input name="buscar" class="SearchBar" type="text" required placeholder="Pesquisar">
+                                <button class='ButtonImgLupaSearchSend'>
+                                    <img class="LogoInsideSearchBtn ClickPointer"src="{% static '/img/LupaLogo.svg' %}" alt=" Botão Lupa para pesquisar" srcset="">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="OptionsCHeader">
+                            <a class="itemText" href="">Categorias</a>
+                            <a class="itemText" href="">Empresas</a>
+                            <a class="itemText" href="">Trabalhos</a>
+                            <a class="itemText" href="">Destaques</a>
+                        </div>
+                    </div>
+                    <div class="MenusC Container">
+                        <div class="OptionsMenu">
+                            <img id="HomeBack" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/HomeLogo.svg' %}"  onclick=window.location.href="http://127.0.0.1:8000" alt="Voltar para a pagina inicial ">
+                            <img id="MainMenuToggler" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/ProfileLogo.svg' %}" alt="Abrir Menu Principal">
+                            <img id="ConfigMenuToggler" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/EngrenagemLogo.svg' %}" alt="Abrir menu de Configurações">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+<script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+<script src="{% static '/js/header.js' %}"></script>
+</body>
+</html>

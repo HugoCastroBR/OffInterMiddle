@@ -1,0 +1,64 @@
+{% extends 'header.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+<body>
+    
+    <link rel="stylesheet" href="{% static '/css/main.css'%}">
+    <nav>
+        <div id="nav_container_balls">
+            <div class="nav_ball"></div>
+            <div class="nav_ball"></div>
+            <div class="nav_ball"></div>
+            <div class="nav_ball"></div>
+            <div class="nav_ball"></div>
+        </div>
+        <div id="nav_container_ops">
+            <div class="nav_op_choose"></div>
+            <div class="nav_op_choose"></div>
+            <div class="nav_op_choose"></div>
+            <div class="nav_op_choose"></div>
+            <div class="nav_op_choose"></div>
+        </div>
+    </nav>
+    <section>
+        
+        <div id="section_table">Descubra, aproveite e seja feliz conosco</div>
+        <div id="section_ops_type">
+            <div class="section_select" id="section_empresa_select">
+                <div class="top_pre_section" id="top_section_empresa_select">
+                    <span class="title_top_section">Distribuidora ou empresa </span> 
+                </div>
+                <div class="bottom_pre_section" id="bottom_section_empresa_select">
+                    <span class="title_bottom_section">Tudo que Grandes negocios podem oferecer. </span> 
+                </div>
+            </div>
+            <div class="section_select" id="section_loja_select">
+                <div class="top_pre_section" id="top_section_loja_select">
+                    <span class="title_top_section">Loja ou pequena empresa </span> 
+                    
+                </div>
+                <div class="bottom_pre_section" id="bottom_section_loja_select">
+                    <span class="title_bottom_section">Ache empregos e pequenos negocios aqui. </span> 
+                </div>
+            </div>
+            <div  class="section_select" id="section_pessoa_select">
+                <div class="top_pre_section" id="top_section_pessoa_select">
+                    <span class="title_top_section">Pessoa ou investidor </span> 
+                    
+                </div>
+                <div class="bottom_pre_section" id="bottom_section_pessoa_select">
+                    <span class="title_bottom_section">Procurando candidatos para vaga ou quer uma? </span> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+{% endblock %}
+

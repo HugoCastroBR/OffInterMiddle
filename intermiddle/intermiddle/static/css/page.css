@@ -1,0 +1,644 @@
+body{
+    overflow-x: hidden;
+}
+
+.ProductPageBody{
+    
+    width: 100vw; 
+    height: 1820px;   
+    background-color: #2E3131 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.ProductPageDiv{
+    
+    width: 1000px;
+    background-color: #4e5353;
+    height: 5000px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.Box-1C{
+    
+    width: 999px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.C1-ImageItem{
+    width: 600px;
+    height: 600px;
+    
+}
+.MainImageContainerC1{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainImageC1User{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    
+}
+.ImageUpperC1{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FirstBoxUpperC1{
+    height: 50px;
+    width: 600px;
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.C1ImgButn{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
+    
+}
+.LeftBTNC1{
+    margin-left: 500px;
+}
+.RightBTNC1{
+    margin-left: 0px;
+}
+
+.SecBoxUpperC1{
+    height: 50px;
+    width: 200px;
+    margin-top: 240px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.BallPageC1{
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.BallPageC1:hover{
+    border: 1px solid white;
+    background-color: #8C14FC;
+    width: 14px;
+    height: 14px;
+}
+.BallSelectd{
+    border: 1px solid white;
+    background-color: #8C14FC;
+    width: 14px;
+    height: 14px;
+}
+
+
+.C1-InfoItem{
+    width: 398px;
+    height: 600px;
+    border: 1px solid black;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+}
+.C1-ROW1{
+    display: flex;
+    justify-content: start;
+    width: 400px;
+    height: 30px;
+    
+    align-items: center;
+}
+.C1-ROW1-Title{
+    color: white;
+    font-size: 20px;
+}
+.C1-ROW2{
+    width: 400px;
+    height: 50px;
+    
+}
+
+
+.StarFS{
+
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    align-items: center;
+    
+}
+.StarSVG{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: -2px;
+    margin-left: -6px;
+}
+
+.StarC1-Row2{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+    
+    
+}
+.Starbtn{
+    border: none;
+    background-color: #4e5353;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.StarClean{
+    cursor: pointer;
+}
+.StarClean:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.StarC1-Row2:hover{
+    
+}
+
+.StarC1R2-Fulled{
+    position: absolute;
+}
+
+
+
+
+
+.C1-ROW3{
+    width: 400px;
+    height: 150px;
+    border-top: 1px solid #2E3131;
+}
+
+.C1-Row3-TextContainerBy{
+   
+    word-wrap: break-word;
+    color: white;
+
+}
+.C1-Row3-TextContainer{
+    word-wrap: break-word;
+    color: white; 
+}
+
+
+
+
+
+.C1-ROW4{
+    width: 400px;
+    height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.C1-ROW4-TextContainer{
+    word-wrap: break-word;
+    color: white;
+}
+.PriceTextConfigC1-ROW4{
+    justify-self: center;
+    align-self: center;
+    
+    font-size: 30px;
+}
+.UnittextConfigC1-ROW4{
+    justify-self: center;
+    align-self: center;
+}
+.C1-ROW4-PriceC{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.C1-ROW5{
+    width: 400px;
+    height: 70px;
+    border-top: 1px solid #2E3131;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.C1-ROW5-BTN{
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #8C14FC;
+    font-size: 18px;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.C1-ROW5-BTN:hover{
+    box-shadow: 3px 3px 5px -3px black; 
+    border: 1px solid white;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.Box-2C{
+    width: 1000px;
+    height: 600px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.TextBox-2C{
+    width: 980px;
+    height: 580px;
+    
+}
+
+.C2-TextContainer{
+    color: white;
+    word-wrap: break-word;
+}
+
+
+
+
+.Box-3C{
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 990px;
+    height: 400px;
+    
+    display: flex;
+    flex-direction: row;
+    
+    
+
+}
+.C3-Coments{
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+}
+.C3-Box-Coment{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 395px;
+    align-items: center;
+    background-color: #8C14FC;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 5px 4px 4px 2px rgba(0, 0, 0, 0.568);
+}
+.C3-Box-Coment:hover{
+    transition: 1s;
+    transform: scale(1.05);
+
+    
+}
+
+
+.C3BComent-ByBox{
+    width: 200px;
+    height: 30px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+
+
+
+
+.C3BComent-ByBox-By{
+    color: white;
+}
+
+.C3BComent-TitleBox{
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.C3BComent-TextBox{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 180px;
+    height: 270px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    border-top: none;
+}
+.C3BComent-DatePost{
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    
+}
+.C3BComent-Votes{
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.VoteText{
+    font-size: 10px;
+}
+
+.C3B-vote{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.VoteBTn{
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+    border: none;
+    transition: 0.2s;
+    
+}
+.VoteBTn:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px 1px white;
+}
+
+
+.UpOp{
+    background-color: green;
+
+}
+.DwOp{
+    background-color: red;
+}
+
+.SeeAllComentsC4{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SeeAllComentsC4Btn{
+    width: 1000px;
+    height: 50px ;
+    background-color: #2E3131;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.SeeAllComentsC4Btn:hover{
+    transition: 1s;
+    color: black;
+    background-color: #4e5353;
+    border-top: 50px solid white;
+    
+}
+.SeeAllComentsC4BtnText{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -140px;
+    transition: 2s;
+}
+
+.SeeAllComentsC4Btn:hover .SeeAllComentsC4BtnText{
+    transition: 3s;
+    color: black;
+    margin-top: -40px;
+}
+
+
+.DefaultTextConfig{
+    font-family: "Arial Black", Helvetica, sans-serif;
+    color: white;
+}
+
+
+@media screen and (max-width: 1000px){
+    .ProductPageBody{
+        width: 100vw;
+        overflow-x: hidden;
+        height: 3100px;
+    }
+    .ProductPageDiv{
+        margin-top: -50px;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    body{
+        width: 100vw;
+    }
+    
+    .Box-1C{
+        margin-top: -300px;
+        width: auto;
+        align-items: center;
+        height: 1200px;
+        flex-direction: column;
+        border: none;
+        justify-content: center;
+    }
+    .C1-ImageItem{
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .ImageUpperC1{
+        width: auto;
+    }
+    .FirstBoxUpperC1{
+        width: 95vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .C1ImgButn{
+
+    }
+    .MainImageContainerC1{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+    .MainImageC1User{
+        width: 300px;
+        
+    }
+    .C1-InfoItem{
+        width: 95vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        word-break: break-all;
+        white-space: normal;
+    }
+    .C1-Row3-TextContainer{
+        display: block;
+        width: 95vw;
+        word-break: break-all;
+        
+    }
+
+    .C1-ROW4-TextContainer{
+        display: block;
+        word-break: break-all;
+        width: 95vw;
+    }
+    .C1-ROW4-PriceC{
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .Box-2C{
+        
+        margin-top: -300px;
+        width: 95vw;
+        height: 1200px;
+        
+    }
+
+    .C3-Box-Coment{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .FirstBoxUpperC1{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .C1ImgButn{
+        position: absolute;
+        
+    }
+    .RightBTNC1{
+        margin-left: -190px;
+    }
+    .LeftBTNC1{
+        margin-left: 150px;
+    }
+    .C4-AllComents{
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .FirstBoxUpperC1{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .C1ImgButn{
+        position: absolute;
+        
+    }
+    .RightBTNC1{
+        margin-left: -160px;
+    }
+    .LeftBTNC1{
+        margin-left: 120px;
+    }
+    .C4-AllComents{
+        margin-top: 300px;
+    }
+}

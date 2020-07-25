@@ -1,0 +1,59 @@
+{% extends 'header.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href=".{% static '/css/header.css' %}">
+<link rel="stylesheet" href=".{% static '/css/buscar.css' %}">
+<link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+
+    <main id="main_block">
+        <div class="flex_container_colunm" id="Lateral_container">
+            <div class="FilterBox">
+                <span>Filtros</span>
+            </div>
+        </div>
+        <div class="flex_container_colunm" id="centrar_container">
+            <span class="title_Max" >Exibindo 1 resultados:</span>
+
+            {% if Posts  %}
+            {% for Post  in Posts %}
+            <div class="item_container">
+                <div class="image_item_flex">
+                    <img class="image_logo_item" src="{% static '/img/logo_intermiddle.png' %}" alt="">
+                </div>
+                <div>
+                    <div class="A_element_flex_in_container">
+                        <a class="title_element_item" href="">{{Post.TituloPost}}</a>
+                        <p class="by_title" >Por<a  href="" > Intermiddle</a></p>
+                    </div>
+                    <div class="B_element_flex_in_container">
+                        <div class="Descri_item">
+                            <p class="Descri_item_p">Lorem ipsum dolor sit amet consectetur, adip
+                                isicing elit. Quos odio ducimus fuga dolores ratione nam unde molestias neque aperiam
+                                 perspiciatis vero, ipsa suscipit vitae blanditiis, accusamus tenetur exercitationem quaerat
+                                  deleniti?</p>
+                        </div>
+                        <div class="Favs_itens_ops"></div>
+                    </div>
+                    <div class="C_element_flex_in_container">
+                       <button class="mainButtonElementC">Favoritar</button>
+                       <button class="mainButtonElementC">Contatar</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+            
+
+
+            
+        </div>
+        <div class="flex_container_colunm" id="Lateral_container_end">
+
+        </div>
+    </main>
+</body>
+</html>
+{% endblock %}

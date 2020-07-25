@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <script src="{% static '/js/header.js' %}"></script>
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+</head>
+<body>
+    
+
+   
+    <div class="main">
+        <img id="logo_loginPanel" src="{% static '/img/logo_intermiddle.png' %}" alt="Voltar para O inicio" onclick="window.location.href = '../home/main.html'" srcset="">
+        <div class='container' id="login_form">
+            <form  class='container'  action="">
+                <span id="loginText">Login</span>
+                <input class="main_input_login"  required placeholder="Email" type="text">
+                <input class="main_input_login" required placeholder="Senha"type="text">
+                <a id="loginErrorHelperA"href="">Não estou conseguindo logar</a>
+                <div class='container' id="mainButtonSpace">
+                    <div id=Remenber_login>
+                        <input type="checkbox" name="" id="checkRemember">
+                        <span id="RemeberText">Lembrar de mim</span>
+                    </div>
+                    <button class="btnInLoginPanel" id="Login_btn">Entrar</button>
+                </div>
+                
+            
+            </form>
+            <button class="btnInLoginPanel" onclick=window.location.href="http://127.0.0.1:8000/register" id="Register_btn">Registrar</button>
+
+        </div>
+
+    </div>
+  
+</body>
+</html>

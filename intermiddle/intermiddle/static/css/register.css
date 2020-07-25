@@ -1,0 +1,221 @@
+body{
+    
+    margin: 0px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2E3131;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #8C14FC;
+    align-items: center;
+}
+
+#Register_form{
+    margin-bottom: 10vh;
+    background-color: #8C14FC;
+    width: 300px;
+    height: 600px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    
+    
+}
+#RegisterText{
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+}
+.main_input_Register{
+    background-color: #2E3131;
+    border: none;
+    border: 1px solid #2E3131;
+    margin-top: 10px;
+    top: 100px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.main_input_Register:hover,:focus{
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+
+
+#RegisterErrorHelperA{
+    margin-top: 10px;
+    color: white;
+    
+}
+
+
+.btnInRegisterPanel{
+    
+    background-color: #2E3131;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.btnInRegisterPanel:hover,:focus{
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+.logos_space{
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+    height: 180px;
+    width: 300px;
+    top: 225px;  
+    transition: 10s;
+}
+
+.giraFull{
+    transition: 10000s;
+    transform: rotateY(1000000deg);
+    
+}
+
+.centrar{
+   
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:42%;
+    left:49%;
+
+
+}
+
+.logo_RegisterPanel{
+    margin-left: 40px;
+    position: absolute;
+    height: 180px;
+    width: 200px;
+    cursor: pointer;
+}
+#RemeberText{
+    color: white;
+}
+
+.btnInRegisterSelectPanel{
+    margin-top: 8px;
+    background-color: #2E3131;
+    text-decoration: none;
+    border: 1px solid black  ;
+    
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+.btnInRegisterSelectPanel:hover,:focus{
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+#selectType{
+    display: flex;
+}
+
+.selectedTypeOf{
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 2px #ae57ff;
+    border-color: #ae57ff;
+    background-color: white;
+    color: #2E3131;
+}
+
+#termsTextShow{
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.no{
+    display: none;
+}
+
+.redlight{
+    transition: 2s;
+    margin-top: 8px;
+    background-color: #2E3131;
+    text-decoration: none;
+    border: 1px solid black  ;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    box-shadow: 0px 0px 5px 2px red;
+    border-color: red;
+    background-color: rgb(133, 9, 9);
+    color: #ffffff;
+}
+.redlight:hover{
+    transition: 2s;
+    margin-top: 8px;
+    background-color: #2E3131;
+    text-decoration: none;
+    border: 1px solid black  ;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    box-shadow: 0px 0px 5px 2px red;
+    border-color: red;
+    background-color: rgb(133, 9, 9);
+    color: #ffffff;
+}
+
+.no_work{
+    display: none;
+}
+
+#aviso{
+    color: red;
+    
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px){
+    .LogoContainer{
+        display: none;
+    }
+}

@@ -1,0 +1,326 @@
+body{
+    margin: 0px;
+}
+#headermax{
+    position: absolute;
+    top: 0px;
+}
+
+#header{
+    position: absolute;
+    top: 0px;
+}
+.MainContainer{
+    
+    width: 100vw;
+    height: 80px;
+    background-color: #8C14FC;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Container{
+    display: flex;
+}
+
+.MidCHeader{
+  
+    width: 1000px;
+    height: 80px;
+}
+
+
+.LogosHeader{
+
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 80px;
+} 
+.LogosHeader:hover{
+    transition: 3s;
+    filter: invert();
+}
+.LogosHeader:hover #logoDentro{
+
+    transition: 3s;
+    transform: rotateX(360deg);
+}
+.LogosHeader:hover #logoMedio{
+    transition: 3s;
+    transform: rotateY(360deg);
+}
+.LogosHeader:hover #logoFora{
+    transition: 3s;
+    transform: rotateZ(-360deg);
+}
+
+#logoDentro{
+    transition: 3s;
+    position: absolute;
+    width: 60px;
+
+}
+#logoMedio{
+    transition: 3s;
+    position: absolute;
+    width: 60px;
+}
+
+#logoFora{
+    transition: 3s;
+    position: absolute;
+    width: 60px;
+}
+.MidC{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 80px;
+
+    justify-content: flex-end;
+    
+}
+
+.MenusC{
+    display: flex;
+    width: 250px;
+    height: 80px;
+
+    justify-content: flex-end;
+}
+
+.SearchC{
+    margin-bottom: 1px;
+    width: 500px ;
+    height: 40px;
+
+    
+}
+
+.OptionsCHeader{
+    width: 500px ;
+    height: 15px;
+    
+  
+    
+}
+.OptionsMenu{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.ItemLogoMenuOP{
+    width: 30px;
+    margin-right: 10px;
+    filter: invert();
+    
+}
+
+.formSearch{
+    display: flex;
+}
+
+.ButtonImgLupaSearchSend{
+    width: 30px;
+    height: 30px;
+    margin-top: 0px;
+    border: none;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.SearchBar{
+    width: 470px;
+    height: 30px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.LogoInsideSearchBtn{
+    width: 20px;
+    height: 21px;
+    fill: #8C14FC;
+}
+
+.OptionsCHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.itemText{
+    color: white;
+    font-size: 16px;
+    margin-top: -7px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: "Arial Black", Helvetica, sans-serif;
+
+}
+
+.MenuHeader{
+    position: absolute;
+    display: flex;
+    margin-top: 80px;
+    width: 300px;
+    height: 300px;
+    background-color: #8C14FC;
+    margin-left: calc(50% + 200px);
+    flex-direction: column;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px ;
+    z-index: 11;
+}
+
+.ItensContainerOpsMenu{
+    
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+.LinkItemMenu{
+    padding-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Arial Black", Helvetica, sans-serif;
+}
+
+#MenuThree{
+    padding-top: 10px;
+    
+    margin-top: 0px;
+
+
+}
+
+#SairA{
+    color: rgb(255, 24, 24);
+}
+
+.LinkItemMenu:hover{
+    transition: 0.2s;
+    background-color: rgb(255, 255, 255);
+    color: #8C14FC;
+}
+
+.no{
+    display: none;
+}
+
+.ClickPointer{
+    cursor: pointer;
+}
+
+#ConfigMenuToggler{
+    transition: 5s;
+}
+#ConfigMenuToggler:hover{
+    transition: 5s;
+    transform: rotateZ(-360deg);
+}
+
+@media screen and (max-width: 1000px){
+    #interheader{
+        overflow-x: hidden;
+        
+    }
+    .MidCHeader {
+        justify-content: center;
+        width: 100vw;
+    }
+    .LogoC{
+        width: 60px;
+    }
+    .MidC{
+        width: 180px;
+    }
+    .SearchC{
+        width: 30vw;
+    }
+    .OptionsCHeader{
+        width: 160px;
+        margin-left: 40px;
+        
+    }
+    .itemText{
+        font-size: 12px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .MenuHeader{
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width: 380px){
+    .OptionsCHeader{
+        width: 160px;
+        margin-left: 50px;
+        
+    }
+    .MidCHeader{
+        width: 90vw;
+    }
+    .LogoC{
+        display: none;
+        width: 0px
+    }
+    .MenuHeader{
+        width: 100vw;
+        margin-left: 0%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        
+    }
+
+
+}
+@media screen and (max-width: 330px){
+    .MidCHeader{
+        width: 90vw;
+    }
+    .LogoC{
+        display: none;
+        width: 0px
+    }
+    #HomeBack{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 300px){
+    .SearchC{
+       display: none;
+    }
+    .MidCHeader{
+        width: 98vw;
+    }
+    .LogoC{
+        display: none;
+        width: 0px
+    }
+    #HomeBack{
+        display: none;
+    }
+    .itemText{
+        display: none;
+    }
+    #ConfigMenuToggler{
+        display: none;
+    }
+    #MainMenuToggler{
+       margin-right: calc(50vw + 30px);
+    }
+}
+
+

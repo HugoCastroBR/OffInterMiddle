@@ -1,0 +1,194 @@
+{% extends 'header.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+    <main class="ProductPageBody">
+        <link rel="stylesheet" href="{% static 'css/page.css' %}">
+        
+        <div class="ProductPageDiv">
+            <div class="Box-1C">
+                <div class="C1-ImageItem">
+                    <div class="ImageUpperC1">
+                        <div class="FirstBoxUpperC1">
+                            <div class="C1ImgButn RightBTNC1">
+                                <img src="{% static '/img/nextL.svg' %}" onclick="Refresh_balls(false)" alt="" srcset="">
+                            </div>
+                            <div class="C1ImgButn LeftBTNC1" >
+                                <img src="{% static '/img/nextR.svg' %}" onclick="Refresh_balls(true)" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="SecBoxUpperC1">
+                            <div class="BallPageC1 BallSelectd" onclick=" Refresh_balls_id(1)" id="BpC1-1"></div>
+                            <div class="BallPageC1" onclick=" Refresh_balls_id(2)" id="BpC1-2"></div>
+                            <div class="BallPageC1" onclick=" Refresh_balls_id(3)" id="BpC1-3"></div>
+                            <div class="BallPageC1" onclick=" Refresh_balls_id(4)" id="BpC1-4"></div>
+                            <div class="BallPageC1" onclick=" Refresh_balls_id(5)" id="BpC1-5"></div>
+                        </div>
+                    </div>
+                    <div class="MainImageContainerC1">
+                        {% if page.foto_produto %}
+        
+                        <img class="MainImageC1User" src="{{ page.foto_produto.url }}" alt="">
+                        
+                    {% else %}
+                        <img class="MainImageC1User" src="{% static '/img/logo_intermiddle_cinza.png ' %}" alt="">
+                    {% endif %}
+                       
+                        
+                    </div>
+                </div>
+                <div class="C1-InfoItem">
+                    <div class="C1-ROW1">
+                        <span class="C1-ROW1-Title DefaultTextConfig ">
+                            {{page.TituloPost}}
+                        </span>
+                    </div>
+                    <div class="C1-ROW2">
+                        <div class="FavoriteStatus">
+                            <form class="StarFS ">
+
+                                <div class="StarC1-Row2 StarClean">
+                                    <button onclick="console.log('s')" class="Starbtn" id="VoteItemOOp1">
+                                        
+                                        {% if page.Estrelas > 0 %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% else %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% endif %}
+                                    </button>     
+                                </div>
+                                <div class="StarC1-Row2 StarClean">
+                                    <button class="Starbtn" id="VoteItemOOp2">
+                                        {% if page.Estrelas > 19 %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% else %}
+                                            <img class="StarSVG" src="{% static '/img/star.svg' %}" alt="">
+                                        {% endif %}
+                                    </button>    
+                                </div>
+                                <div class="StarC1-Row2 StarClean">
+                                    <button class="Starbtn" id="VoteItemOOp3">
+                                        {% if page.Estrelas > 29 %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% else %}
+                                            <img class="StarSVG" src="{% static '/img/star.svg' %}" alt="">
+                                        {% endif %}
+                                    </button>    
+                                </div>
+                                <div class="StarC1-Row2 StarClean">
+                                    <button class="Starbtn" id="VoteItemOOp4">
+                                        {% if page.Estrelas > 39 %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% else %}
+                                            <img class="StarSVG" src="{% static '/img/star.svg' %}" alt="">
+                                        {% endif %}
+                                    </button>    
+                                </div>
+                                <div class="StarC1-Row2 StarClean" >
+                                    <button class="Starbtn" id="VoteItemOOp1">
+                                        {% if page.Estrelas > 44 %}
+                                            <img class="StarSVG"  src="{% static '/img/starFull.svg' %}" alt="">
+                                        {% else %}
+                                            <img class="StarSVG" src="{% static '/img/star.svg' %}" alt="">
+                                        {% endif %}
+
+                                    </button>    
+                                </div>
+                            </form>
+                     
+
+                        </div>
+                    </div>
+                    <div class="C1-ROW3">
+                        <span class="C1-Row3-TextContainer DefaultTextConfig">
+                            {{page.descricao_no_buscar}}
+                        </span>
+                    </div>
+                    <div class="C1-ROW4">
+                        <span class="C1-ROW4-TextContainer DefaultTextConfig">
+                            {{page.data_do_post}}
+                        </span>
+                        <div class="C1-ROW4-PriceC">
+                            <span class="C1-ROW4-TextContainer DefaultTextConfig PriceTextConfigC1-ROW4">
+                                R$ {{page.preco}}
+                            </span>
+                            <span class="C1-ROW4-TextContainer DefaultTextConfig UnittextConfigC1-ROW4">
+                                cada
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="C1-ROW5">
+                        <button class="C1-ROW5-BTN">Contato</button>
+                        <button class="C1-ROW5-BTN">Favoritar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Box-2C">
+                <div class="TextBox-2C">
+                    <span class="C2-TextContainer DefaultTextConfig">
+                        {{page.descricao}}
+
+                </span>
+                </div>
+            </div>
+            <div class="Box-3C">
+
+
+                <div class="C3-Coments">
+                    <div class="C3-Box-Coment">
+                        <div class="C3BComent-ByBox">
+                            <p class="C3BComent-ByBox-By DefaultTextConfig">Ana maa</p>
+                        </div>
+                        <div class="C3BComent-TitleBox">
+                            <p class="DefaultTextConfig">Nao compre</p>
+                        </div>
+                        <div class="C3BComent-TextBox">
+                            <span class="DefaultTextConfig">
+                                ivamus ut tortor non justo dignissim consectetur et at orci. Mauris eget dolor et nibh mollis elementum. Sed varius consequat est, non tempus ipsum tempor in. In ullamcorper vel ipsum quis mattis
+                            </span>
+                        </div>
+                        <div class="C3BComent-DatePost">
+                            <p class="DefaultTextConfig">14/04/2018</p>
+                        </div>
+                        <div class="C3BComent-Votes">
+                            <div class="C3B-vote optionUp">
+                                <p class="DefaultTextConfig VoteText">132</p>
+                                <form action="">
+                                    <button class="VoteBTn UpOp"></button>
+                                </form>
+                                <p class="DefaultTextConfig VoteText">Up</p>
+                            </div>
+                            <div class="C3B-vote optionDw">
+                                <p class="DefaultTextConfig VoteText">10</p>
+                                <form action="">
+                                    <button class="VoteBTn DwOp"></button>
+                                </form>
+                                <p class="DefaultTextConfig VoteText">Down</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            
+            </div>
+            <div class="C4-AllComents">
+                <form action="" class="SeeAllComentsC4">
+                    <button class="SeeAllComentsC4Btn DefaultTextConfig">
+                        <span class="SeeAllComentsC4BtnText DefaultTextConfig">Ver todos os comentarios</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="{% static '/js/jquery-3.5.1.js ' %}"></script>
+<script src="{% static '/js/page.js ' %}"></script>
+<script src="{% static '/js/header.js' %}"></script>
+{% endblock %}
+</body>
+</html>

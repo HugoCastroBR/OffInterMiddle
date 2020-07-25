@@ -1,0 +1,105 @@
+{% extends 'header.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href=".{% static '/css/header.css' %}">
+<link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+
+    <main class="MainProducts">
+        <link rel="stylesheet" href="{% static '/css/buscar.css' %}">
+        <div class="ProductsBody">
+            {% if Posts  %}
+            {% for Post  in Posts %}
+            <div class="EachProduct">
+                <div class="ImgProductContainer">
+                    <form class="FavoriteButton">
+                        <button class="favoriteBtn">
+                            <img class="favoriteImgBtn"src="{% static '/img/starFull.svg' %}" alt="" srcset="">
+                        </button>
+                    </form>
+                    <div class="ImgContainer">
+                        {% if Post.foto_produto %}
+                            <img class="ImgProduct" src="{{ Post.foto_produto.url }}" alt="">
+                            
+                        {% else %}
+                            <img class="ImgProduct" src="{% static '/img/logo_intermiddle_cinza.png' %}" alt="">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="ContainInfosProducts">
+                    <div class="ProductName">
+                        <div>
+                            <span class="PText">{{Post.TituloPost}}</span>
+                        </div>
+                        <div class="StarContInfo">
+                            
+                            <span class="PText Nvotes">{{Post.Votos_Totais}} votos</span>
+                            
+                            {% if Post.Estrelas < 20 %}
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                            {% elif Post.Estrelas < 30 %}
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                            {% elif Post.Estrelas < 40 %}
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                            {% elif Post.Estrelas < 45 %}
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                            {% elif Post.Estrelas < 50 %}
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                                <img class="StarInInfos" src="{% static '/img/starFull.svg' %}" alt="">
+                            {% else %}
+                                
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="DataInfo">
+                        <span class="DataInfoTx PText">{{Post.data_do_post}}</span>
+                    </div>
+                    <div class="DescProduct">
+                        <span class="DescProductTx PText">
+                            {{Post.descricao_no_buscar}}
+                        </span>
+                    </div>
+                    <div class="VerMais">
+                        <span class="PText">
+                            R$ {{Post.preco}} cada
+                        </span>
+                        <span class="PText">
+                            
+                        </span>
+                        <button onclick="window.location.href='{% url 'page' Post.id %}' " class="VerMaisBtn PText">
+                            Ver Mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+            
+
+
+            
+        </div>
+        <div class="PagesProducts">
+            <span class="PText">Pagina: </span>
+            <form action="">
+                <button class="PText BtnPage">1</button>
+                <button class="PText BtnPage">2</button>
+            </form>
+        </div>
+    </main>
+<script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+<script src="{% static '/js/header.js' %}"></script>
+</body>
+</html>
+{% endblock %}

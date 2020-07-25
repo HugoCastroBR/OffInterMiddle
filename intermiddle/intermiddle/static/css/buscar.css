@@ -1,0 +1,223 @@
+body{
+    overflow-x: hidden;
+    background-color: #2E3131;
+    display: flex;
+    
+    
+}
+
+.MainProducts{
+    width: 100vw;
+    height: auto;
+    background-color: #2E3131;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.ProductsBody{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+.EachProduct{
+    
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 300px;
+    height: 600px;
+    transition: 0.5s;
+    
+}
+
+.EachProduct:hover{
+    transition: 0.5s;
+    transform: scale(1.025);
+    box-shadow: 3px 3px 5px -3px; 
+}
+.ImgProductContainer{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3b3d3d;
+
+}
+.ImgContainer{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImgProduct{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+
+.FavoriteButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.favoriteImgBtn{
+    width: 25px;
+    height: 25px;
+}
+.favoriteBtn{
+    
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #2e313100;
+}
+.favoriteBtn:hover{
+    transition: 0.5s;
+    
+    transform: scale(1.2);
+}
+
+.ContainInfosProducts{
+    width: 300px;
+    height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+}
+.ProductName{
+    width: 300px;
+    height: 20px;
+    background-color: #3b3d3d;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.StarContInfo{
+    width: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.StarContInfo:hover > .Nvotes{
+    display: block;
+
+}
+.Nvotes{
+    
+    position: absolute;
+    margin-top: 20px;
+    z-index: 2;
+    font-size: 10px;
+    display: none;
+}
+.StarInInfos{
+    width: 15px;
+    height: 15px;
+}
+
+
+.DataInfo{
+    height: 20px;
+    width: 300px;
+    background-color: #2E3131;
+}
+.DataInfoTx{
+    font-size: 12px;
+}
+
+
+.DescProductTx{
+    padding-top: 5px;
+    width: 300px;
+    height: 215px;
+    display: block;
+    background-color: #3b3d3d;
+    font-size: 14px;
+}
+
+.VerMais{
+    height: 40px;
+    width: 300px;
+    background-color: #3b3d3d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.VerMaisBtn{
+    border: none;
+    background-color: #8C14FC;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.VerMaisBtn:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.PText{
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    text-emphasis: wrap;
+}
+
+.PagesProducts{
+    margin-top: 5px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 1000px;
+    height: 50px;
+    background-color: #3b3d3d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.BtnPage{
+    cursor: pointer;
+    border: none;
+    background-color: #3b3d3d00;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+.BtnPage:hover{
+    transition: 0.3s;
+    color: #8C14FC;
+}
+
+@media screen and (max-width: 1050px){
+    .ProductsBody{
+        width: 100vw;
+    }
+}

@@ -1,0 +1,81 @@
+{% load static %}
+
+{% block content %}{% endblock %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Intermiddle</title>
+
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+</head>
+<div id="headermax">
+    
+    <div id="menu">
+        <div class="menu_op" id="menu_itens_Pessoal">
+            <a class="menu_item_op"href="{% url 'login' %}">Login</a>
+            <a class="menu_item_op"href="">Conexões</a>
+        </div>
+        <div class="menu_op"id="menu_itens_Negocios">
+            <a class="menu_item_op"href="">Negocios</a>
+            <a class="menu_item_op"href="">Projetos</a>
+        </div>
+        <div class="menu_op" id="menu_itens_conta">
+            <a class="menu_item_op"href="">Trabalhos</a>
+            <a class="menu_item_op"href="">Conteudo</a>
+        </div>
+        <div class="menu_op" id="menu_itens_conta">
+            <a class="menu_item_op"href="">Ajuda</a>
+            <a class="menu_item_op"href="">Configurações</a>
+            <a class="menu_item_op"href="">Sair</a>
+        </div>
+
+
+    </div>
+    <header>
+
+        <div id='container_mid_header'>
+            
+            <div id='header_contain_logo'>
+                <img id="Logo_fora"class='logo_header'src="{% static '/img/logo_fora.png' %}" alt="" srcset="">
+                <img id="Logo_medio"class='logo_header'src="{% static '/img/logo_medio.png' %}" alt="" srcset="">
+                <img id="Logo_dentro"class='logo_header'src="..{% static '/img/logo_dentro.png' %}" alt="" srcset="">
+            </div>
+            <div id="header_container_main">
+                <div >
+                    <form id="header_container_searchBar"action="{% url 'buscar' %}" >
+                        <input id="header_search_bar_input" name="buscar" required placeholder="Pesquisar">
+                        <input type="image" id="header_search_logo"src="{% static '/img/Searh_logo_header.png' %}" alt="" srcset="">
+                    </form>
+                </div>
+                <div id="header_container_ops">
+                    <a class="header_item_container_ops" href="">Categorias</a>
+                    <a class="header_item_container_ops" href="">Favoritos</a>
+                    <a class="header_item_container_ops" href="">Destaque</a>
+                </div>
+            </div>
+            <div id="header_container_end">
+                <div id="header_contain_promo">
+                    <span>App para celular</span>
+        
+                </div>
+                <div id="header_contain_user">
+                    <img id="header_profile_img" src="{% static '/img/no_profile_foto.jpg' %}" alt="" onclick="abrir_menu()" srcset="">
+                    <span id="header_user_name" onclick="abrir_menu()" >User</span>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script src="{% static '/js/jquery.js' %}"></script>
+    <script src="{% static '/js/header.js' %}"></script>
+    
+</div>
+</html>

@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+}
+
+.RegisterMain{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+    
+}
+
+.FormContainer{
+    width: 600px;
+    height: 700px;
+    background-color: #2e3131ec;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.RegisterForm{
+    width: 600px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.FormInputDefault{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 500px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    color: white;
+    background-color: #3f4343;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    
+    
+}
+
+.TitleText{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 50px;
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    background: rgb(140,20,252);
+    background: -moz-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8c14fc",endColorstr="#8e44ad",GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.RegisterBtn{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: none;
+    background: rgb(140,20,252);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.FormSelect{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 500px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #3f4343;
+    font-family: "Arial Black", Helvetica, sans-serif;
+}
+
+.CheckText{
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+}
+.AvisoText{
+    display: block;
+    word-wrap: break-word;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    background: rgb(140,20,252);
+    background: -moz-linear-gradient(90deg, rgba(140,20,252,1) 2%, rgba(255,0,0,1) 40%);
+    background: -webkit-linear-gradient(90deg, rgba(140,20,252,1) 2%, rgba(255,0,0,1) 40%);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 2%, rgba(255,0,0,1) 40%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8c14fc",endColorstr="#ff0000",GradientType=1););
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.AvisoTextGreen{
+    display: block;
+    word-wrap: break-word;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    background: rgb(140,20,252);
+    background: -moz-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(0,255,16,1) 50%);
+    background: -webkit-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(0,255,16,1) 50%);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(0,255,16,1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8c14fc",endColorstr="#00ff10",GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.OptionEstado{
+    display: block;
+    font-size: 15px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .FormContainer{
+        transform: scale(0.5);
+    }
+}
+@media screen and (max-width: 500px){
+    .FormContainer{
+        overflow-y: hidden;
+        overflow-x: hidden;
+        transform: scale(1);
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .TitleText{
+        font-size: 40px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .FormInputDefault{
+        width: 300px;
+        height: 30px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        font-size: 15px;
+    }
+    .FormSelect{
+        width: 300px;
+    }
+    .RegisterBtn{
+        margin-bottom: 20px;
+    }
+    .AvisoText{
+        text-align: center;
+        width: 95vw;
+        height: 50px;
+        font-size: 15px;
+    }
+    .OptionEstado{
+        display: block;
+        font-size: 11px;
+        height: 10px;
+    }
+    .FormSelect{
+        width: 300px;
+        height: 30px;
+        outline: none;
+        padding: 0px 0px;
+    }
+    
+    
+   
+}

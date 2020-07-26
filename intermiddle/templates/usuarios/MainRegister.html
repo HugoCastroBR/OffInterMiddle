@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="../../static/css/Login/MainRegister.css">
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+</head>
+<body>
+    <main class="MainRegisterBody">
+        <div class="RegisterTextBox">
+            <span class="RegisterText ButtonTypeProfileText">
+                Registre-se
+            </span>
+        </div>
+
+        <div class="RegisterBox">
+            <span class="ButtonTypeProfileText">
+                Escolha seu tipo de conta:
+            </span>
+            <div action="" class="FormOptions">
+
+                <div class="ButtonTypeProfileContainer" id="LojaItem">
+                    <button class="ButtonTypeProfile" onclick="window.location.href='{% url 'loja' %}' ">
+                        <span class="ButtonTypeProfileText no TextProps" id="TextLoja" >
+                        Tem uma loja ou pequeno negocio ? Essa é para você então.
+                        </span>
+                    </button>
+                    <span class="ButtonTypeProfileText" >
+                        Loja
+                    </span>
+                </div>
+                
+                <div class="ButtonTypeProfileContainer" id="EmpresaItem">
+                    <button class="ButtonTypeProfile" onclick="window.location.href='{% url 'empresa' %}' " >
+                        <span class="ButtonTypeProfileText no TextProps" id="TextEmpresa">
+                        É uma empresa, fornecedor ou medio/ grande negocio? sugerimos essa opção.
+                        </span>
+                    </button>
+                    <span class="ButtonTypeProfileText">
+                        Empresa
+                    </span>
+                </div>
+
+                <div class="ButtonTypeProfileContainer" id="PessoaItem">
+                    <button class="ButtonTypeProfile" onclick="window.location.href='{% url 'pessoa' %}' ">
+                        <span class="ButtonTypeProfileText no TextProps" id="TextPessoa">
+                        Eita! Já que é uma pessoa, essa é sua opção!  :)
+                        </span>
+                    </button>
+                    <span class="ButtonTypeProfileText" >
+                        pessoa
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </main>
+</body>
+</html>

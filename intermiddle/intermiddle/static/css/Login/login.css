@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+}
+.MainLogin{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/railway-station-4644316.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.FormContainer{
+    background-color: #2e3131f8;
+    width: 300px;
+    height: 400px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    
+}
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.TextDefault{
+    font-family: "Arial Black", Helvetica, sans-serif;
+    color: white;
+}
+.InputDefault{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 200px;
+    height: 40px;
+    background-color: #2E3131 ;
+    border: none;
+    background: rgb(140,20,252);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+.BtnDefault{
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 50px;
+    margin-bottom: -25px;
+    border: none;
+    background: rgb(140,20,252);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    color: white;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.BtnDefault:hover{
+    transition: 1s;
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1.035);
+    background: rgb(142,68,173);
+    background: -moz-linear-gradient(90deg, rgba(142,68,173,1) 0%, rgba(140,20,252,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(142,68,173,1) 0%, rgba(140,20,252,1) 100%);
+    background: linear-gradient(90deg, rgba(142,68,173,1) 0%, rgba(140,20,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8e44ad",endColorstr="#8c14fc");
+}
+
+.CheckContainer{
+    margin-top: 30px;
+    margin-bottom: -25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: rgb(140,20,252);
+    background: -moz-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    background: linear-gradient(90deg, rgba(140,20,252,1) 0%, rgba(142,68,173,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8c14fc",endColorstr="#8e44ad",GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ErrorMsg{
+    text-align: center;
+    height: 20px;
+    display: block;
+    color: red;
+}

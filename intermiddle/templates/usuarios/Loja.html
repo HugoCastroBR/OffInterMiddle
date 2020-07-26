@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja | Resgistre-se</title>
+    <link rel="stylesheet" href="{% static 'static/css/Login/Register.css' %}">
+    <link rel="stylesheet" href="{% static 'static/css/Login/LojaRegister.css' %}">
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+</head>
+<body>
+    <main class="RegisterMain">
+        <div class="FormContainer">
+           <form class="RegisterForm" name="Registrar"  action="{% url 'loja' %}" method="POST">
+                {% csrf_token %}
+                <span class="TitleText">Resgistre-se</span>
+                {% if messages %}
+                    {%for message in messages%}
+                            <span id="AvisoShow" class="AvisoText">{{message}}</span>
+                    {% endfor %}
+                {% else %}
+                    <span id="AvisoShow" class="AvisoText">{{message}}</span>
+                {% endif %}
+                <input class="FormInputDefault" id="NomeMain" name="NomeMain" type="text" type="text" required placeholder=" Nome da Loja">
+                <input class="FormInputDefault" id="NomeUser" name="NomeUser" type="text" required placeholder=" Nome de Usuario">
+                <input class="FormInputDefault" name="PhoneNumber" id="PhoneNumber" type="text" required placeholder=" Telefone"type="tel" name="" id="">
+                <select class="FormSelect" id="Estado" name="Estado" id="" type="text" required placeholder=" Estado ">
+
+                    <option class="OptionEstado" value="AC">Acre</option>
+                    <option class="OptionEstado" value="AL">Alagoas</option>
+                    <option class="OptionEstado" value="AP">Amapá</option>
+                    <option class="OptionEstado" value="AM">Amazonas</option>
+                    <option class="OptionEstado" value="BA">Bahia</option>
+                    <option class="OptionEstado" value="CE">Ceará</option>
+                    <option class="OptionEstado" value="DF">Distrito Federal</option>
+                    <option class="OptionEstado" value="ES">Espirito Santo</option>
+                    <option class="OptionEstado" value="GO">Goiás</option>
+                    <option class="OptionEstado" value="MA">Maranhão</option>
+                    <option class="OptionEstado" value="MT">Mato Grosso</option>
+                    <option class="OptionEstado" value="MS">Mato Grosso do sul</option>
+                    <option class="OptionEstado" value="MG">Minas Gerais</option>
+                    <option class="OptionEstado" value="PA">Pará</option>
+                    <option class="OptionEstado" value="PB">Paraíba</option>
+                    <option class="OptionEstado" value="PR">Paraná</option>
+                    <option class="OptionEstado" value="PE">Pernambuco </option>
+                    <option class="OptionEstado" value="PI">Piauí </option>
+                    <option class="OptionEstado" value="RJ">Rio de Janeiro</option>
+                    <option class="OptionEstado" value="RN">Rio Grande do Norte</option>
+                    <option class="OptionEstado" value="RS">Rio Grande do Sul</option>
+                    <option class="OptionEstado" value="RO">Rondônia</option>
+                    <option class="OptionEstado" value="RR">Roraima </option>
+                    <option class="OptionEstado" value="SC">Santa Catarina</option>
+                    <option class="OptionEstado" value="SP">São Paulo</option>
+                    <option class="OptionEstado" value="SE">Sergipe</option>
+                    <option class="OptionEstado" value="TO">Tocantins</option>
+
+                </select>
+                <input class="FormInputDefault" type="email" name="Email" id="Email" type="text" required
+                    placeholder=" Email">
+                <input class="FormInputDefault" type="password" name="Senha1" id="Senha1" type="text" required
+                    placeholder=" Senha ">
+                <input class="FormInputDefault" type="password" name="Senha2" id="Senha2" type="text" required
+                    placeholder=" Repita a senha ">
+               <div>
+                   <input type="checkbox" name="AgreeTermos" id="AgreeTermos">
+                   <span class="CheckText">Aceito e li os </span><a class="CheckText" href="">Termos de uso</a>
+               </div>
+               <button id="SendBtn" class="RegisterBtn">Registrar</button>
+           </form>
+        </div>
+    </main>
+    <script src="{% static 'static/js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'static/js/login/register.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Intermiddle</title>
+    <link rel="stylesheet" href="../static/css/Login/login.css">
+    <link rel="shortcut icon" href="{% static '/img/inter_ico.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <main class="MainLogin">
+        
+        <div class="FormContainer">
+            <h1 class="TextDefault" >Login</h1>
+            {% if messages %}
+                {%for message in messages%}
+                    <span class="TextDefault ErrorMsg" >{{message}}</span>
+                    <a  class="TextDefault" href="">Recuperar conta</a>
+                {% endfor %}
+            {% else %}
+                <span class="TextDefault ErrorMsg" ></span>
+            {%endif%}
+    
+                
+            <form class="LoginForm" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input class="InputDefault TextDefault" type="text"   name="NomeUser" required placeholder="Cnpj ou Usuario">
+                <input class="InputDefault TextDefault" type="password" name="Senha" id=""  required placeholder="Senha">
+                <div class="CheckContainer">
+                    <input type="checkbox" name="" id="">
+                    <span class="TextDefault"> Lembre-se de mim</span>
+                </div>
+                <button class="BtnDefault">Login</button>
+            </form>
+            <button class="BtnDefault" onclick="window.location.href= '{% url "cadastro" %}' " >Registre-se</button>
+
+        </div>
+    </main>
+</body>
+
+</html>

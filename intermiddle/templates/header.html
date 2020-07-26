@@ -36,21 +36,45 @@
 
             <div id="MainMenuHeader" class="MenuHeader MainMenu no">
                 <div class="ItensContainerOpsMenu" id="MenuFirst">
-                    <a class="LinkItemMenu" href="">Minha conta</a>
-                    <a class="LinkItemMenu" href="">Favoritos</a>
-                    <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                    {% if user.is_authenticated %}
+                        {% if user.first_name == "Empresa" %}
+                            <a class="LinkItemMenu" href="">{{user.last_name}}</a>
+                            <a class="LinkItemMenu" href="">Favoritos</a>
+                            <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                        {%else%}
+                            <a class="LinkItemMenu" href="">{{user.username}}</a>
+                            <a class="LinkItemMenu" href="">Favoritos</a>
+                            <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                        {%endif%}
+                    {% else %}
+                        <a class="LinkItemMenu" href="{% url 'login' %}">Login</a>
+                        <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                    {% endif %}
                     
                 </div>
                 <div class="ItensContainerOpsMenu" id="MenuTwo">
-                    <a class="LinkItemMenu" href="">Meus Negocios</a>
-                    <a class="LinkItemMenu" href="">Trabalhos</a>
-                    <a class="LinkItemMenu" href="">Conexões</a>
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" href="">Meus Negocios</a>
+                        <a class="LinkItemMenu" href="">Trabalhos</a>
+                        <a class="LinkItemMenu" href="">Conexões</a>
+                    {% else %}
+                    {% endif %}
+
                 </div>
                 <div class="ItensContainerOpsMenu" id="MenuThree">
-                    <a class="LinkItemMenu" href="">Ajuda</a>
-                    <a class="LinkItemMenu" href="">Configurações</a>
-                    <a class="LinkItemMenu" href="">Alterar Conta</a>
-                    <a class="LinkItemMenu" id="SairA" href="">Sair</a>
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" href="">Ajuda</a>
+                        <a class="LinkItemMenu" href="">Configurações</a>
+                        <a class="LinkItemMenu" href="{% url 'logout_login' %}">Alterar Conta</a>
+                    {% else %}
+                        <a class="LinkItemMenu" href="">Ajuda</a>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" id="SairA" href="{% url 'logout' %}">Sair</a>
+                    {% else %}
+                        
+                    {% endif %}
                 </div>
                 
             </div>

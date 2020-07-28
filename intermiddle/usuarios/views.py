@@ -138,7 +138,7 @@ def cadastro_loja(request):
         print("Alert: Usuario Cadastrado %s %s %s %s"%(nomeMain,username,Estado,email))
         return redirect('login')
    
-    return render(request,'usuarios/loja.html')
+    return render(request,'usuarios/Loja.html')
 
 
 
@@ -148,8 +148,7 @@ def login(request):
         username = request.POST['NomeUser']
         Senha = request.POST['Senha']
         if username == "" or Senha == "":
-            print("campos Vazios")
-        print(username,Senha)
+            print("Alert: campos Vazios")
         
         if User.objects.filter(username=username).exists():
             user = auth.authenticate(request, username=username, password=Senha)
@@ -158,9 +157,11 @@ def login(request):
                 print("Alert: Usuario Logado com sucesso, %s , %s , %s ,"%(user.first_name,username,user.last_name))
                 return redirect('index')
             else:
+                print("Alert: Usuario ou senha incorreto")
                 messages.error(request,'Usuario e/ou senha incorretos!')
                 return redirect('login')
         else:
+            print("Alert: Usuario ou senha inexistente")
             messages.error(request,'Usuario e/ou senha incorretos!')
             return redirect('login')
 

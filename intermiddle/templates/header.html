@@ -19,17 +19,25 @@
         <header  id="interheader">
             <div id="ConfigMenuHeader" class="MenuHeader ConfigMenu no">
                 <div class="ItensContainerOpsMenu" id="MenuFirst">
-                    <a class="LinkItemMenu" href="">Privacidade</a>
-
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" href="">Privacidade</a>
+                    {%else%}
+                        <a class="LinkItemMenu" href="{% url 'login' %}">Login</a>
+                    {%endif%}
                     
                 </div>
                 <div class="ItensContainerOpsMenu" id="MenuTwo">
-                    <a class="LinkItemMenu" href="">Segurança</a>
-        
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" href="">Segurança</a>
+                    {%else%}
+                    {%endif%}
                 </div>
                 <div class="ItensContainerOpsMenu" id="MenuThree">
-                    <a class="LinkItemMenu" href="">Alterar Conta</a>
-                    <a class="LinkItemMenu" id="SairA" href="">Sair</a>
+                    {% if user.is_authenticated %}
+                        <a class="LinkItemMenu" href="">Alterar Conta</a>
+                        <a class="LinkItemMenu" id="SairA" href="">Sair</a>
+                    {%else%}
+                    {%endif%}
                 </div>
                 
             </div>
@@ -48,7 +56,7 @@
                         {%endif%}
                     {% else %}
                         <a class="LinkItemMenu" href="{% url 'login' %}">Login</a>
-                        <a class="LinkItemMenu" href="">Pagina Inicial</a>
+                        <a class="LinkItemMenu" href="{% url 'index' %}">Pagina Inicial</a>
                     {% endif %}
                     
                 </div>
@@ -82,7 +90,7 @@
             <div class="MainContainer">
                 <div class="MidCHeader Container">
                     <div class="LogoC Container">
-                        <div class="LogosHeader  "onclick=window.location.href="http://127.0.0.1:8000">
+                        <div class="LogosHeader  onclick="window.location.href='{% url 'index' %}' ">
                             <img id="logoDentro" class="ClickPointer" src="{% static '/img/logo_dentro.png' %}" alt="Logo Parte de Dentro">
                             <img id="logoMedio" class="ClickPointer" src="{% static '/img/logo_medio.png' %}" alt="Logo Parte do Meio">
                             <img id="logoFora" class="ClickPointer" src="{% static '/img/logo_fora.png' %}" alt="Logo Parte de Fora">
@@ -106,7 +114,7 @@
                     </div>
                     <div class="MenusC Container">
                         <div class="OptionsMenu">
-                            <img id="HomeBack" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/HomeLogo.svg' %}"  onclick=window.location.href="http://127.0.0.1:8000" alt="Voltar para a pagina inicial ">
+                            <img id="HomeBack" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/HomeLogo.svg' %}"  onclick="window.location.href='{% url 'index' %}' " alt="Voltar para a pagina inicial ">
                             <img id="MainMenuToggler" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/ProfileLogo.svg' %}" alt="Abrir Menu Principal">
                             <img id="ConfigMenuToggler" class="ItemLogoMenuOP ClickPointer" src="{% static '/img/EngrenagemLogo.svg' %}" alt="Abrir menu de Configurações">
                         </div>

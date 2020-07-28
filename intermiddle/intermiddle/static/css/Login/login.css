@@ -102,3 +102,15 @@ h1{
     display: block;
     color: red;
 }
+.InputDefault::-webkit-input-placeholder {
+    color: white;
+ }
+ .InputDefault:-moz-placeholder {
+    color: white;
+ }
+ .InputDefault::-moz-placeholder{
+    color: white;
+ }
+ .InputDefault:-ms-input-placeholder {
+    color: white;
+ }

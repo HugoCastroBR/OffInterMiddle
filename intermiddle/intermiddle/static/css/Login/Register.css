@@ -134,6 +134,19 @@ body{
     height: 50px;
 }
 
+.FormInputDefault::-webkit-input-placeholder {
+    color: white;
+ }
+ .FormInputDefault:-moz-placeholder {
+    color: white;
+ }
+ .FormInputDefault::-moz-placeholder{
+    color: white;
+ }
+ .FormInputDefault:-ms-input-placeholder {
+    color: white;
+ }
+
 
 @media screen and (max-width: 1200px){
     .FormContainer{

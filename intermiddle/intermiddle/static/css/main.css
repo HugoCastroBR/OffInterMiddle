@@ -309,7 +309,7 @@ body{
 @media screen and (max-width: 1920px){
     .RetangleContainerItem:hover{
     
-        margin-bottom: 100px;
+        margin-top: -50px;
         margin-left: 0px;
         
         transition: 0.3s;

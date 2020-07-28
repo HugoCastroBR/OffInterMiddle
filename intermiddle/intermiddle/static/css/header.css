@@ -239,12 +239,14 @@ body{
         width: 100vw;
     }
     .LogoC{
-        width: 60px;
+        display: none;
+        width: 0px;
     }
     .MidC{
         width: 180px;
     }
     .SearchC{
+        margin-left: 5px;
         width: 30vw;
     }
     .OptionsCHeader{

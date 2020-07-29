@@ -10,8 +10,8 @@ body{
     position: absolute;
     top: 0px;
 }
+
 .MainContainer{
-    
     width: 100vw;
     height: 80px;
     background-color: #8C14FC;
@@ -92,7 +92,6 @@ body{
 }
 
 .SearchC{
-    margin-bottom: 1px;
     width: 500px ;
     height: 40px;
 
@@ -102,7 +101,6 @@ body{
 .OptionsCHeader{
     width: 500px ;
     height: 15px;
-    
   
     
 }
@@ -139,6 +137,7 @@ body{
     border: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    z-index: 11;
 }
 
 .LogoInsideSearchBtn{
@@ -152,17 +151,19 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    
+    
 }
 
 .itemText{
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: -7px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     text-decoration: none;
     font-family: "Arial Black", Helvetica, sans-serif;
-
+    text-align: center;
 }
 
 .MenuHeader{
@@ -191,7 +192,7 @@ body{
     padding-left: 30px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Arial Black", Helvetica, sans-serif;
 }
 
@@ -238,31 +239,46 @@ body{
         justify-content: center;
         width: 100vw;
     }
-    .LogoC{
+    .LogosHeader{
         display: none;
-        width: 0px;
+    }
+    .OptionsMenu{
+        margin-right: 20px;
+    }
+    .LogoC{
+        width: 60px;
     }
     .MidC{
         width: 180px;
     }
     .SearchC{
-        margin-left: 5px;
         width: 30vw;
     }
     .OptionsCHeader{
         width: 160px;
-        margin-left: 40px;
+        margin-left: 50px;
         
     }
     .itemText{
         font-size: 12px;
         margin-left: 2px;
         margin-right: 2px;
+        text-align: center;
     }
     .MenuHeader{
         margin-left: 50%;
     }
 }
+@media screen and (max-width: 500px){
+    .MenuHeader{
+        width: 100vw;
+        margin-left: 0%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        
+    }
+}
+
 @media screen and (max-width: 380px){
     .OptionsCHeader{
         width: 160px;
@@ -270,7 +286,9 @@ body{
         
     }
     .MidCHeader{
-        width: 90vw;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
     }
     .LogoC{
         display: none;
@@ -286,10 +304,40 @@ body{
 
 
 }
+@media screen and (max-width: 360px){
+    .MainContainer{
+        justify-content: center;
+    }
+    .MidCHeader{
+
+        width: 90vw;
+        
+    }
+    .OptionsCHeader{
+        margin-left: 80px;
+    }
+
+    .LogoC{
+        display: none;
+        width: 0px
+    }
+    #HomeBack{
+        display: none;
+    }
+
+}
+
+
 @media screen and (max-width: 330px){
     .MidCHeader{
-        width: 90vw;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
     }
+    .OptionsCHeader{
+        margin-left: 60px;
+    }
+
     .LogoC{
         display: none;
         width: 0px

@@ -294,10 +294,7 @@ body{
     filter: invert();
     
 }
-.EngrenagemM:hover{
-    transition: 1000s;
-    transform: rotateZ(100000deg);
-}
+    
 
 .x-3-end{
     margin-top: 6   00px;

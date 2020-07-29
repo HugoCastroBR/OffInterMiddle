@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'intermiddle.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dcer2c1h7k0rbj',
-        'USER':'ihawakccrrjfxu',
-        'PASSWORD':'b95d780a388c3c1e6aebefffa6ba4f669dddff88326aa182a3fe3dbfde58e82c',
-        'HOST':'ec2-54-197-254-117.compute-1.amazonaws.com',
+        'NAME':'-',
+        'USER':'HugoCastroBR',
+        'PASSWORD':'32119294h',
+        'HOST':'intermiddle.c8eatfd39tie.us-east-2.rds.amazonaws.com',
         'PORT':'5432'
     }
 }

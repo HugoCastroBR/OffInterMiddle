@@ -10,7 +10,15 @@ class AllPost(models.Model):
     preco  = models.IntegerField()
     categoria = models.CharField(max_length=100)
     data_do_post = models.DateTimeField(default=datetime.now, blank = True)
+
+    #fotos
     foto_produto = models.ImageField(upload_to='fotos/%d/%m/%Y/',blank=True)
+    foto_produto2 = models.ImageField(upload_to='fotos/%d/%m/%Y/',blank=True)
+    foto_produto3 = models.ImageField(upload_to='fotos/%d/%m/%Y/',blank=True)
+    foto_produto4 = models.ImageField(upload_to='fotos/%d/%m/%Y/',blank=True)
+    foto_produto5 = models.ImageField(upload_to='fotos/%d/%m/%Y/',blank=True)
+
+    #Avaliação
     Uma_Estrela = models.IntegerField(max_length=1000, default=0)
     Duas_Estrela = models.IntegerField(max_length=1000, default=0)
     Tres_Estrela =models.IntegerField(max_length=1000, default=0)
@@ -18,6 +26,10 @@ class AllPost(models.Model):
     Cinco_Estrela = models.IntegerField(max_length=1000, default=0)
     Votos_Totais = models.IntegerField(max_length=5000, default=0)
     Estrelas = models.IntegerField(max_length=100, default=0)
+
+    #Publicada
     publicada = models.BooleanField(default=False)
+
+    #
     def __str__(self):
         return self.TituloPost

@@ -75,13 +75,23 @@ WSGI_APPLICATION = 'intermiddle.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'Intermiddle',
+#        'USER':'postgres',
+#        'PASSWORD':'32119294h',
+#        'HOST':'localhost'
+#    }
+#}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Intermiddle',
-        'USER':'postgres',
-        'PASSWORD':'32119294h',
-        'HOST':'localhost'
+        'NAME': 'dcer2c1h7k0rbj',
+        'USER':'ihawakccrrjfxu',
+        'PASSWORD':'b95d780a388c3c1e6aebefffa6ba4f669dddff88326aa182a3fe3dbfde58e82c',
+        'HOST':'ec2-54-197-254-117.compute-1.amazonaws.com',
+        'PORT':'5432'
     }
 }
 

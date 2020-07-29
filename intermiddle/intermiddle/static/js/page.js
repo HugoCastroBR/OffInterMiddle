@@ -1,19 +1,39 @@
-let AtualBall = 1
+let AtualBall = 0
+const ImageQueryTemplate = "#Image_"
+
+var elem = document.getElementsByClassName("BallPageC1")
+var elementoAtual = 0
+
+function GerarId(){
+    elementoAtual = ((elem[AtualBall].id).split("-")[1])
+
+    return (elem[AtualBall].id)
+}
 
 function AtualizarImg(){
-    $(`#BpC1-${AtualBall}`).addClass("BallSelectd")
+    $(`#${GerarId()}`).addClass("BallSelectd")
+
+    $(`${ImageQueryTemplate}${elementoAtual}`).removeClass("no")
+    
+}
+
+function AtualizarPerBall(n){
+
+    $(`#BpC1-${n}`).addClass("BallSelectd")
+    $(`${ImageQueryTemplate}${n}`).removeClass("no")
 }
 
 function reset(){
     $(".BallPageC1").removeClass("BallSelectd")
-    console.log(AtualBall)
+
+    $(".MainImageC1User").addClass("no")
 }
 
 function verificarvalor(){
-    if(AtualBall > 5){
-        AtualBall = 1
-    }else if(AtualBall < 1){
-        AtualBall = 5
+    if(AtualBall > (elem.length - 1)){
+        AtualBall = 0
+    }else if(AtualBall < 0){
+        AtualBall = (elem.length - 1)
     }else{
 
     }
@@ -39,16 +59,23 @@ function add(Right){
 }
 
 function Refresh_balls_id(id){
-    AtualBall = id
+    
     verificarvalor()
     reset()
-    AtualizarImg()
+    elementoAtual = id
+    console.log(elementoAtual)
+    AtualizarPerBall(id)
 }
 
+
 function Refresh_balls(Right){
+    //console.log($(".BallPageC1").id)
+
+    GerarId()
     if(Right == true){
         add(true)
     }else{
         add(false)
     }
 }
+

@@ -20,21 +20,65 @@
                             </div>
                         </div>
                         <div class="SecBoxUpperC1">
-                            <div class="BallPageC1 BallSelectd" onclick=" Refresh_balls_id(1)" id="BpC1-1"></div>
+                            {% if page.foto_produto %}
+                                <div class="BallPageC1 BallSelectd" onclick=" Refresh_balls_id(1)" id="BpC1-1"></div>
+                            {% else %}
+                            
+                            {% endif %}
+                            {% if page.foto_produto2 %}
+                                <div class="BallPageC1 " onclick=" Refresh_balls_id(2)" id="BpC1-2"></div>
+                            {% else %}
+                        
+                            {% endif %}
+                            {% if page.foto_produto3 %}
+                                <div class="BallPageC1 " onclick=" Refresh_balls_id(3)" id="BpC1-3"></div>
+                            {% else %}
+                        
+                            {% endif %}
+                            {% if page.foto_produto4 %}
+                                <div class="BallPageC1 " onclick=" Refresh_balls_id(4)" id="BpC1-4"></div>
+                            {% else %}
+                        
+                            {% endif %}
+                            {% if page.foto_produto5 %}
+                                <div class="BallPageC1 " onclick=" Refresh_balls_id(5)" id="BpC1-5"></div>
+                            {% else %}
+                        
+                            {% endif %}
+
+                            <!-- <div class="BallPageC1 BallSelectd" onclick=" Refresh_balls_id(1)" id="BpC1-1"></div>
                             <div class="BallPageC1" onclick=" Refresh_balls_id(2)" id="BpC1-2"></div>
                             <div class="BallPageC1" onclick=" Refresh_balls_id(3)" id="BpC1-3"></div>
                             <div class="BallPageC1" onclick=" Refresh_balls_id(4)" id="BpC1-4"></div>
-                            <div class="BallPageC1" onclick=" Refresh_balls_id(5)" id="BpC1-5"></div>
+                            <div class="BallPageC1" onclick=" Refresh_balls_id(5)" id="BpC1-5"></div> -->
                         </div>
                     </div>
                     <div class="MainImageContainerC1">
                         {% if page.foto_produto %}
-        
-                        <img class="MainImageC1User" src="{{ page.foto_produto.url }}" alt="">
-                        
-                    {% else %}
-                        <img class="MainImageC1User" src="{% static '/img/logo_intermiddle_cinza.png ' %}" alt="">
-                    {% endif %}
+                            <img class="MainImageC1User" id="Image_1" src="{{ page.foto_produto.url }}" alt="">
+                        {% else %}
+                            <img class="MainImageC1User" id="Image_1"  src="{% static '/img/logo_intermiddle_cinza.png ' %}" alt="">
+                        {% endif %}
+                        {% if page.foto_produto2 %}
+                            <img class="MainImageC1User no" id="Image_2" src="{{ page.foto_produto2.url }}" alt="">
+                        {% else %}
+                            
+                        {% endif %}
+                        {% if page.foto_produto3 %}
+                            <img class="MainImageC1User no" id="Image_3" src="{{ page.foto_produto3.url }}" alt="">
+                        {% else %}
+                            
+                        {% endif %}
+                        {% if page.foto_produto4 %}
+                            <img class="MainImageC1User no" id="Image_4" src="{{ page.foto_produto4.url }}" alt="">
+                        {% else %}
+                            
+                        {% endif %}
+                        {% if page.foto_produto5 %}
+                            <img class="MainImageC1User no" id="Image_5" src="{{ page.foto_produto5.url }}" alt="">
+                        {% else %}
+                            
+                        {% endif %}
                        
                         
                     </div>
